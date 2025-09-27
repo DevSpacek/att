@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p class="intro">Eu pensei em um número entre <strong>1 e 100</strong>. Tente adivinhar! Você tem <span
+                id="maxAttempts">10</span> tentativas.</p>
+
+        <div class="controls" role="group" aria-label="Área de palpites">
+            <label for="guess">Seu palpite</label>
+            <input id="guess" type="number" min="1" max="100" inputmode="numeric"
+                placeholder="Digite um número de 1 a 100" />
+            <button id="submitGuess" type="button">Chutar</button>
+            <button id="restart" type="button" class="secondary" hidden>Jogar de novo</button>
+        </div>
+
+        <p id="message" aria-live="polite" class="message">Digite um número e clique em Chutar.</p>
+        <p id="triesLeft" class="tries">Tentativas restantes: <strong>10</strong></p>
+
+        <details class="tips">
+            <summary>Dicas</summary>
+            <ul>
+                <li>Use apenas números inteiros entre 1 e 100.</li>
+                <li>Após cada tentativa, direi se o número secreto é maior ou menor.</li>
+                <li>Você pode pressionar Enter para enviar o palpite.</li>
+            </ul>
+        </details>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
